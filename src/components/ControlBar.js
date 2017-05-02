@@ -25,10 +25,9 @@ const ControlBar = () => {
 
 const styles = {
   barStyle: {
-    borderColor: 'black',
-    borderTopWidth: 3,
-    padding: 10,
-    backgroundColor: 'red',
+    paddingTop: 5,
+    paddingBottom: 5,
+    backgroundColor: 'indigo',
     flexDirection: 'row',
     justifyContent: 'flex-start',
     justifyContent: 'space-between'
@@ -43,8 +42,8 @@ const styles = {
   buttonStyle: {
     borderRadius: 15,
     borderWidth: 5,
-    borderColor: 'grey',
-    backgroundColor: 'blue',
+    borderColor: 'steelblue',
+    backgroundColor: 'steelblue',
     marginLeft: 5,
     marginRight: 5,
     marginTop: 5,

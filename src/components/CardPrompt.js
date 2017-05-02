@@ -14,7 +14,7 @@ const styles = {
     height: 300,
     width: null,
     flex: 1,
-    borderRadius: 20
+    borderRadius: 10
   },
   imageContainerStyle: {
     flex: 1

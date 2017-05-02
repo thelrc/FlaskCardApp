@@ -1,28 +1,20 @@
 import React from 'react';
 import { TouchableOpacity, View, Text} from 'react-native';
+import AnswerButton from './AnswerButton';
 
 const AnswerOptions = () => {
+  
   return (
     <View style={styles.columnStyle}>
       
       <View style={styles.rowStyle}>
-        <TouchableOpacity style={styles.buttonStyle}>
-          <Text style={styles.textStyle}>Option 1</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.buttonStyle}>
-          <Text style={styles.textStyle}>Option 2</Text>
-        </TouchableOpacity>
+        <AnswerButton answer_text='Option 1' />
+        <AnswerButton answer_text='Option 2' />
       </View>
       
       <View style={styles.rowStyle}>
-        <TouchableOpacity style={styles.buttonStyle}>
-            <Text style={styles.textStyle}>Option 3</Text>
-          </TouchableOpacity>
-          
-          <TouchableOpacity style={styles.buttonStyle}>
-            <Text style={styles.textStyle}>Option 4</Text>
-          </TouchableOpacity>
+        <AnswerButton answer_text='Option 3' /> 
+        <AnswerButton answer_text='Option 4' />
       </View>
       
     </View>
@@ -37,25 +29,9 @@ const styles = {
     paddingBottom: 10
   },
   columnStyle: {
-    backgroundColor: 'red',
+    backgroundColor: 'indigo',
     justifyContent: 'space-around',
     flex: 1
-  },
-  buttonStyle: {
-    flex: 1,
-    borderRadius: 15,
-    borderWidth: 5,
-    borderColor: 'blue',
-    backgroundColor: 'pink',
-    marginLeft: 5,
-    marginRight: 5,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  textStyle: {
-    fontWeight: 'bold',
-    fontSize: 25,
-    color: 'black'
   }
 };
 export default AnswerOptions;

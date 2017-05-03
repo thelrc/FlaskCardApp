@@ -5,7 +5,7 @@ import  {TouchableOpacity, Text} from 'react-native';
 class AnswerButton extends Component {
     constructor() {
         super()
-        this.borderChange = this.borderChange.bind(this) // borderChange becomes a new function that is bound to this instance of AnswerButton
+        this.borderChange = this.borderChange.bind(this) 
         
         this.state = {
             toggle: false
@@ -15,11 +15,7 @@ class AnswerButton extends Component {
   
   borderChange() {
     console.log('pressed')
-    this.setState({ toggle: !this.state.toggle }) // This will flip the this.state.toggle
-    // Here comes the error. 
-    // borderChange() is passed to the TouchableOpacity Element as a prop. React's implementation will call it who knows where and how, The problem is that in JS 'this' is bound by certain rules. Generally 'this' refers to the object that came before the '.' in the function invocation. Example: coolObject.borderChange(). 'this' will be coolObject. What that means is that when your borderChange function is called 'this' is undefined, because thay call it nakedly, 'borderChange()'
-    
-    // You need to bind it so the 'this' always points to your component. Like this:
+    this.setState({ toggle: !this.state.toggle })
   }
   
   render(props) {

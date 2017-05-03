@@ -21,7 +21,7 @@ class AnswerButton extends Component {
   render(props) {
     return (
       <TouchableOpacity 
-        style={[styles.unpressedStyle,  this.state.toggle && styles.pressedStyle]} // Good, this will overwrite unpressedStyle, if toggle is true
+        style={[styles.unpressedStyle,  this.state.toggle && styles.pressedStyle]} //This will overwrite unpressedStyle, if toggle is true
         onPress={this.borderChange} > 
           
           <Text style={styles.textStyle}>{this.props.answer_text}</Text>

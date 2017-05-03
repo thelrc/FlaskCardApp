@@ -2,12 +2,13 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import BarButton from './BarButton';
 
-const ControlBar = () => {
+const ControlBar = (props) => {
   return (
     <View style={styles.barStyle}>
       
       
-        <BarButton buttonText={'Main Menu'} />
+        <BarButton buttonText={'Main Menu'}
+                   onPress={props.onPress} />
         <BarButton buttonText={'Last Card'} />
       
       

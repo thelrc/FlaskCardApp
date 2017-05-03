@@ -3,9 +3,15 @@ import {TouchableOpacity, Text} from 'react-native';
 
 export default class BarButton extends Component {
   
-  render(props) {
+  constructor(props) {
+    super(props)
+  }
+  
+render(props) {
+  
     return (
-      <TouchableOpacity style={styles.buttonStyle}>
+      <TouchableOpacity style={styles.buttonStyle}
+                        onPress={()=> this.props.onPress()} >
         <Text style={styles.textStyle}>{this.props.buttonText}</Text>
       </TouchableOpacity>
     );

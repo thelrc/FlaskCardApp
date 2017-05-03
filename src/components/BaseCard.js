@@ -5,13 +5,16 @@ import ControlBar from './ControlBar';
 import AnswerOptions from './AnswerOptions';
 
 class BaseCard extends Component {
+  constructor(props){
+    super(props)
+  }
   
-  render() {
+  render(props) {
     return (
       <ScrollView contentContainerStyle={styles.LayoutStyle}>
           <CardPrompt src={'https://s-media-cache-ak0.pinimg.com/originals/66/86/89/668689018f6c7a6ab83944200b4fbdc6.jpg'} 
           /> 
-          <ControlBar />
+          <ControlBar onPress={this.props.onPress} />
           <AnswerOptions />
       </ScrollView>  
     );

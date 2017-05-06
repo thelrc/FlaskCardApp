@@ -2,7 +2,6 @@ import Expo from 'expo';
 import React, {Component} from 'react';
 import {View} from 'react-native';
 import BaseCard from './src/components/BaseCard';
-import CardPrompt from './src/components/CardPrompt';
 import MainMenu from './src/components/MainMenu';
 
 class flashCard extends Component {

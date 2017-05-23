@@ -24,8 +24,8 @@ const styles = {
     
   },
   imageContainerStyle: {
-    flex: 1
-    /*marginTop: 22,
+    flex: 1,/*
+    marginTop: 22,
     marginLeft: 5,
     marginRight: 5,
     borderWidth: 5,

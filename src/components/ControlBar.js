@@ -24,7 +24,7 @@ const styles = {
   barStyle: {
     paddingTop: 5,
     paddingBottom: 5,
-    backgroundColor: 'indigo',
+    //backgroundColor: 'indigo',
     flexDirection: 'row',
     justifyContent: 'flex-start',
     justifyContent: 'space-between'

@@ -3,7 +3,7 @@ import  {TouchableOpacity, Text} from 'react-native';
 
 
 class AnswerButton extends Component {
-    constructor() {
+/*    constructor() {
         super()
         this.borderChange = this.borderChange.bind(this) 
         
@@ -17,12 +17,13 @@ class AnswerButton extends Component {
     console.log('pressed')
     this.setState({ toggle: !this.state.toggle })
   }
+*/
   
   render(props) {
     return (
       <TouchableOpacity 
-        style={[styles.unpressedStyle,  this.state.toggle && styles.pressedStyle]} //This will overwrite unpressedStyle, if toggle is true
-        onPress={this.borderChange} > 
+        style={[styles.unpressedStyle, this.props.borderState && styles.pressedStyle]} //This will overwrite unpressedStyle, if toggle is true
+        onPress={this.props.answer} > 
           
           <Text style={styles.textStyle}>{this.props.answer_text}</Text>
       

@@ -1,21 +1,26 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
 import BarButton from './BarButton';
 
 const ControlBar = (props) => {
   return (
     <View style={styles.barStyle}>
-      
-      
-        <BarButton buttonText={'Main Menu'}
-                   onPress={props.onPress} />
-        <BarButton buttonText={'Last Card'} />
-      
-      
-      
-        <BarButton buttonText={'Submit Answer'} />
-      
+      <BarButton 
+        buttonText={"Main Menu"}
+        pressed={props.navToggle} />
+        
     
+      <View style={styles.textContainerStyle}>
+        <Text style={[styles.neutralText, props.correct && styles.correctText, 
+                      props.wrong && styles.wrongText]} >
+          {props.checker}
+        </Text>
+      </View>
+        
+      <BarButton      
+        buttonText={'Next Card'}
+        pressed={props.submit} />
+
     </View>
   );
 };
@@ -26,16 +31,32 @@ const styles = {
     paddingBottom: 5,
     //backgroundColor: 'indigo',
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    //justifyContent: 'flex-start',
     justifyContent: 'space-between'
   },
-  leftBarStyle: {
+  /*leftBarStyle: {
     flexDirection: 'row',
     flex: 1
   },
   rightBarStyle: {
     alignItems: 'flex-end'
+  },*/
+  textContainerStyle: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    //alignItems: 'flex-start'
+  },
+  neutralText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  correctText: {
+    color: '#0F0'
+  },
+  wrongText: {
+    color: 'red'
   }
-}
+};
 
 export default ControlBar;

@@ -1,8 +1,9 @@
 import Expo from 'expo';
-import React, {Component} from 'react';
-import {View} from 'react-native';
-import BaseCard from './src/components/BaseCard';
+import React, { Component } from 'react';
+import { View } from 'react-native';
+//import { StackNavigator } from 'react-navigation';
 import MainMenu from './src/components/MainMenu';
+import BaseCard from './src/components/BaseCard';
 
 class flashCard extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class flashCard extends Component {
     if (this.state.start) 
     { return (
         <View style={{flex: 1}}>
-    <BaseCard onPress={this.navToggle} />
+          <BaseCard navToggle={this.navToggle} />
         </View>
       );
      }    
@@ -31,7 +32,7 @@ class flashCard extends Component {
     {
       return (
         <View style={{flex: 1}}>
-          <MainMenu onPress={this.navToggle} />
+          <MainMenu navToggle={this.navToggle} />
         </View>
       );  
     }
@@ -39,5 +40,25 @@ class flashCard extends Component {
 }
 
 
-
 Expo.registerRootComponent(flashCard);
+
+//AppRegistry.registerComponent('FlashCards', () => FlashCards);
+
+/*import React from 'react';
+import { AppRegistry, View, } from 'react-native';
+import MainMenu from './src/components/MainMenu';
+import SolveCards from './src/components/SolveCards';
+import HomeScreen from './src/components/HomeScreen';
+
+// Create a component
+const App = () => (
+  <View style={{ flex: 1 }}>
+    <HomeScreen />
+  </View>
+);
+
+//Render it to the device
+AppRegistry.registerComponent('FlashCards', () => App);
+*/
+
+

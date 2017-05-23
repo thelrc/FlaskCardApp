@@ -23,7 +23,7 @@ class BaseCard extends Component {
 
 const styles = {
   LayoutStyle: {
-    backgroundColor: 'indigo',
+    backgroundColor: '#355095',
     flex: 1
   }
 };

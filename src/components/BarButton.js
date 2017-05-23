@@ -1,18 +1,20 @@
-import React, {Component} from 'react';
-import {TouchableOpacity, Text} from 'react-native';
+import React, { Component } from 'react';
+import { TouchableOpacity, Text, Image } from 'react-native';
 
 export default class BarButton extends Component {
   
   constructor(props) {
-    super(props)
+    super(props);
   }
-  
+
 render(props) {
-  
     return (
-      <TouchableOpacity style={styles.buttonStyle}
-                        onPress={()=> this.props.onPress()} >
-        <Text style={styles.textStyle}>{this.props.buttonText}</Text>
+      <TouchableOpacity 
+            style={styles.buttonStyle}
+            onPress={() => this.props.pressed()} >
+            
+      <Text style={styles.textStyle}>{this.props.buttonText}</Text>
+      
       </TouchableOpacity>
     );
   }
@@ -23,12 +25,15 @@ const styles = {
     color: 'white',
     fontSize: 15,
     fontWeight: 'bold',
-    paddingBottom: 4,
-    paddingLeft: 4,
-    paddingRight: 4,
-    paddingTop: 4,
+    //paddingBottom: 4,
+    //paddingLeft: 4,
+    //paddingRight: 4,
+    //paddingTop: 4,
+    marginLeft: 2,
+    marginRight: 2
   },
   buttonStyle: {
+    flex: 1,
     borderRadius: 15,
     borderWidth: 1,
     borderColor: 'white',
@@ -38,8 +43,10 @@ const styles = {
     //marginRight: 5,
     //marginTop: 5,
     //marginBottom: 5,
+    flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: 4
   }
 };
 

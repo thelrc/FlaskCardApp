@@ -19,16 +19,16 @@ render(props) {
       </View>
       
       <TouchableOpacity style={styles.menuButtonStyle}
-                        onPress={this.props.onPress} >
-      <Text style={styles.menuButtonTextStyle}>Display BaseCard</Text>
+                        onPress={this.props.navToggle} >
+      <Text style={styles.menuButtonTextStyle}>Start Learning!</Text>
       </TouchableOpacity>
       
       <TouchableOpacity style={styles.menuButtonStyle}>
-      <Text style={styles.menuButtonTextStyle}>The sekund</Text>
+      <Text style={styles.menuButtonTextStyle}>Load a Deck</Text>
       </TouchableOpacity>
       
       <TouchableOpacity style={styles.menuButtonStyle}>
-      <Text style={styles.menuButtonTextStyle}>The thoid</Text>
+      <Text style={styles.menuButtonTextStyle}>Create New Cards</Text>
       </TouchableOpacity>
     
     </View>

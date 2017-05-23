@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Image } from 'react-native';
+import { View, Image } from 'react-native';
 
 const CardPrompt = (props) => {
   return (
   <View style={styles.imageContainerStyle} >
-      <Image source={{uri: props.src}} style={styles.imageStyle}
-             resizeMode={'cover'} />
+      <Image 
+            source={{ uri: props.src }} style={styles.imageStyle}
+            resizeMode={'stretch'} 
+      />
   </View>    
   );
 };
@@ -24,7 +26,7 @@ const styles = {
     
   },
   imageContainerStyle: {
-    flex: 1,/*
+    flex: 1 /*
     marginTop: 22,
     marginLeft: 5,
     marginRight: 5,
